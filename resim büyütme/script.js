@@ -7,9 +7,16 @@ document.querySelector(".close").addEventListener("click", function () {
 
 })
 // MODALA TIKLANDIĞINDA KAPATMA
-madol.onclick = function () {
- 
-    madol.style.display = "none"    
+const body = document.querySelector("body")
+
+body.onclick = function (event) {
+
+    console.log(event.target)
+    if(event.target.className=="madol"){   //burada event target kullanarak tıklanan kısmın clas ismini alarak 
+      madol.style.display = "none"        //sadece modala tıklandığında kapanmasını sağladık
+    }
+
+
 }
 
 const img = document.querySelectorAll("img")  //burası array döndürüyor
